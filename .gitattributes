@@ -1,0 +1,13 @@
+* text=auto
+
+# 这两个启动脚本必须是 CRLF，否则 Windows 上可能无法双击
+*.vbs text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.ico binary
+*.gif binary
+*.webm binary
+*.mp3 binary
+*.mp4 binary

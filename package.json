@@ -1,0 +1,27 @@
+{
+  "name": "naiwa-desktop-pet",
+  "productName": "奶蛙桌宠",
+  "version": "1.0.0",
+  "description": "奶蛙桌宠：点击就哈哈大笑的 Windows 透明桌宠（Electron + AI 逐帧抠图）",
+  "main": "main.js",
+  "type": "commonjs",
+  "author": "naiwa-desktop-pet contributors",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "smoke": "electron . --smoke",
+    "pack": "electron-packager . 奶蛙 --platform=win32 --arch=x64 --out=dist --overwrite --icon=pet/icon.ico --app-copyright=\"奶蛙桌宠\" --asar.unpackDir=pet --ignore=\"^/assets\" --ignore=\"^/node_modules\" --ignore=\"^/screenshots\" --ignore=\"^/README.md\" --ignore=\"^/tools\" --ignore=\"^/smoke\" --ignore=\"^/dist\" --ignore=\"^/\\.git\""
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^45.0.0"
+  },
+  "homepage": "https://github.com/Chemiofitor4096/naiwa-desktop-pet#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chemiofitor4096/naiwa-desktop-pet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chemiofitor4096/naiwa-desktop-pet/issues"
+  }
+}

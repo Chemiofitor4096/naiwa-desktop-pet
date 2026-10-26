@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'" />
+  <title>奶蛙桌宠</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage">
+    <div id="ground"></div>
+
+    <div id="hint" class="hint" hidden>
+      <b>戳我笑一个</b>
+      <span>右键有菜单</span>
+    </div>
+
+    <div id="pet" role="button" tabindex="0" aria-label="戳一下奶蛙">
+      <div class="breathe">
+        <div class="wobble">
+          <img id="idle" class="media" src="../pet/idle.png" alt="奶蛙" draggable="false" />
+          <video id="laughVideo" class="media" src="../pet/laugh.webm" preload="auto"
+                 playsinline disablepictureinpicture></video>
+          <video id="fallVideo" class="media" src="../pet/fall.webm" preload="auto"
+                 playsinline disablepictureinpicture></video>
+          <img id="gifFallback" class="media" src="../pet/laugh.gif" alt="" draggable="false" />
+        </div>
+      </div>
+    </div>
+
+    <div id="fx" aria-hidden="true"></div>
+
+    <div id="menu" class="menu" hidden>
+      <div class="menu-title"><span class="menu-dot"></span>奶蛙</div>
+      <button class="item" data-act="muted">
+        <span>笑声</span><span class="val" data-val="muted">开</span>
+      </button>
+      <button class="item" data-act="alwaysOnTop">
+        <span>总在最前</span><span class="val" data-val="alwaysOnTop">开</span>
+      </button>
+      <div class="item row">
+        <span>大小</span>
+        <div class="seg" id="scaleSeg">
+          <button data-scale="0.85">小</button>
+          <button data-scale="1">中</button>
+          <button data-scale="1.18">大</button>
+        </div>
+      </div>
+      <button class="item" data-act="resetPosition"><span>回到右下角</span></button>
+      <div class="sep"></div>
+      <button class="item danger" data-act="quit"><span>退出奶蛙</span><span class="val">×</span></button>
+    </div>
+  </div>
+
+  <audio id="fallbackAudio" src="../pet/laugh.mp3" preload="auto"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
